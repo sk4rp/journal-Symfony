@@ -1,0 +1,41 @@
+{% extends export|default(false) ? 'journal/form/export.html.twig' : 'journal/form/layout.html.twig' %}
+
+{% block form %}
+    <p>Индивидуальная работа с родителями</p>
+{% endblock %}
+
+{% block table %}
+    <div class="out-block">
+        {% for row in data %}
+            <div class="out-row-block">
+                <p>ФИО родителя: {{ row.fio }}</p>
+                <p>Обсуждаемые вопросы: {{ row.discussion }}</p>
+                <p>Дата, подпись: {{ row.date|date('d.m.Y') }}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+
+    {% if export|default(false) %}
+        <style>
+            tr > :nth-child(1) {
+                width: 10%;
+            }
+
+            tr > :nth-child(2) {
+                width: 35%;
+            }
+
+            tr > :nth-child(3) {
+                width: 35%;
+            }
+
+            tr > :nth-child(4) {
+                width: 20%;
+            }
+        </style>
+    {% endif %}
+{% endblock %}

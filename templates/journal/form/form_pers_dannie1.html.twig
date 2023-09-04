@@ -1,0 +1,224 @@
+{% extends export|default(false) ? 'journal/form/export.html.twig' : 'journal/form/layout.html.twig' %}
+
+{% block form %}
+    <p>Сводная информация по группе {{ currentAcademicYear.id }} учебный год</p>
+{% endblock %}
+
+{% block table %}
+    <div class="out-block">
+        <div class="out-row-block">
+            <p>Показатели: Численность группы из них юн. \ дев.</p>
+            <p>{{ (currentAcademicYear.id - group.year) * 2 + 1 }} семестр:</p>
+            <p>{{ (currentAcademicYear.id - group.year) * 2 + 2 }} семестр:</p>
+            <p>Год</p>
+        </div>
+
+        <div class="out-row-block">
+            <p>Показатели: Проживают в общежитии</p>
+            <p>{{ (currentAcademicYear.id - group.year) * 2 + 1 }} семестр:</p>
+            <p>{{ (currentAcademicYear.id - group.year) * 2 + 2 }} семестр:</p>
+            <p>Год</p>
+        </div>
+
+        <div class="out-row-block">
+            <p>Показатели: Проживают у родственников \ на квартире</p>
+            <p>{{ (currentAcademicYear.id - group.year) * 2 + 1 }} семестр:</p>
+            <p>{{ (currentAcademicYear.id - group.year) * 2 + 2 }} семестр:</p>
+            <p>Год:</p>
+        </div>
+
+        <div class="out-row-block">
+            <p>Показатели: Успеваемость:</p>
+            <p>{{ (currentAcademicYear.id - group.year) * 2 + 1 }} семестр:</p>
+            <p>{{ (currentAcademicYear.id - group.year) * 2 + 2 }} семестр:</p>
+            <p>Год:</p>
+        </div>
+
+        <div class="out-row-block">
+            <p>Показатели: - абсолютная \ качественная</p>
+            <p>{{ (currentAcademicYear.id - group.year) * 2 + 1 }} семестр:</p>
+            <p>{{ (currentAcademicYear.id - group.year) * 2 + 2 }} семестр:</p>
+            <p>Год:</p>
+        </divp
+        <div class="out-row-block">
+            <p>Показатели: Пропуски занятий:</p>
+            <p>{{ (currentAcademicYear.id - group.year) * 2 + 1 }} семестр:</p>
+            <p>{{ (currentAcademicYear.id - group.year) * 2 + 2 }} семестр:</p>
+            <p>Год:</p>
+        </div>
+
+        <div class="out-row-block">
+            <p>Показатели: - по уважительной причине \ без причины</p>
+            <p>{{ (currentAcademicYear.id - group.year) * 2 + 1 }} семестр:</p>
+            <p>{{ (currentAcademicYear.id - group.year) * 2 + 2 }} семестр:</p>
+            <p>Год:</p>
+        </div>
+        <div class="out-row-block">
+            <p>Показатели: Количество студентов для пед.учета (уклоняющиеся от обучения)</p>
+            <p>{{ (currentAcademicYear.id - group.year) * 2 + 1 }} семестр:</p>
+            <p>{{ (currentAcademicYear.id - group.year) * 2 + 2 }} семестр:</p>
+            <p>Год:</p>
+        </div>
+
+        <div class="out-row-block">
+            <p>Показатели: Работа по повышению мотивации на обучение:</p>
+            <p>{{ (currentAcademicYear.id - group.year) * 2 + 1 }} семестр:</p>
+            <p>{{ (currentAcademicYear.id - group.year) * 2 + 2 }} семестр:</p>
+            <p>Год:</p>
+        </div>
+
+        <div class="out-row-block">
+            <p>Показатели: - пед.учет (количество)</p>
+            <p>{{ (currentAcademicYear.id - group.year) * 2 + 1 }} семестр:</p>
+            <p>{{ (currentAcademicYear.id - group.year) * 2 + 2 }} семестр:</p>
+            <p>Год:</p>
+        </div>
+
+        <div class="out-row-block">
+            <p>Показатели: - индивидуальные беседы</p>
+            <p>{{ (currentAcademicYear.id - group.year) * 2 + 1 }} семестр:</p>
+            <p>{{ (currentAcademicYear.id - group.year) * 2 + 2 }} семестр:</p>
+            <p>Год:</p>
+        </div>
+
+        <div class="out-row-block">
+            <p>Показатели: - встречи с родителями</p>
+            <p>{{ (currentAcademicYear.id - group.year) * 2 + 1 }} семестр:</p>
+            <p>{{ (currentAcademicYear.id - group.year) * 2 + 2 }} семестр:</p>
+            <p>Год:</p>
+        </div>
+
+        <div class="out-row-block">
+            <p>Показатели: - беседы с зав.отделением</p>
+            <p>{{ (currentAcademicYear.id - group.year) * 2 + 1 }} семестр:</p>
+            <p>{{ (currentAcademicYear.id - group.year) * 2 + 2 }} семестр:</p>
+            <p>Год:</p>
+        </div>
+
+        <div class="out-row-block">
+            <p>Показатели: - работа с педагогом психологом</p>
+            <p>{{ (currentAcademicYear.id - group.year) * 2 + 1 }} семестр:</p>
+            <p>{{ (currentAcademicYear.id - group.year) * 2 + 2 }} семестр:</p>
+            <p>Год:</p>
+        </div>
+
+        <div class="out-row-block">
+            <p>Показатели: - приглашение на заседание Совета профилактики</p>
+            <p>{{ (currentAcademicYear.id - group.year) * 2 + 1 }} семестр:</p>
+            <p>{{ (currentAcademicYear.id - group.year) * 2 + 2 }} семестр:</p>
+            <p>Год:</p>
+        </div>
+
+        <div class="out-row-block">
+            <p>Показатели: - обращение по месту работы родителей</p>
+            <p>{{ (currentAcademicYear.id - group.year) * 2 + 1 }} семестр:</p>
+            <p>{{ (currentAcademicYear.id - group.year) * 2 + 2 }} семестр:</p>
+            <p>Год:</p>
+        </div>
+
+        <div class="out-row-block">
+            <p>Показатели: - обращение к инспектору ПДН</p>
+            <p>{{ (currentAcademicYear.id - group.year) * 2 + 1 }} семестр:</p>
+            <p>{{ (currentAcademicYear.id - group.year) * 2 + 2 }} семестр:</p>
+            <p>Год:</p>
+        </div>
+
+        <div class="out-row-block">
+            <p>Показатели: - обращение в КДН</p>
+            <p>{{ (currentAcademicYear.id - group.year) * 2 + 1 }} семестр:</p>
+            <p>{{ (currentAcademicYear.id - group.year) * 2 + 2 }} семестр:</p>
+            <p>Год:</p>
+        </div>
+
+        <div class="out-row-block">
+            <p>Показатели: Количество студентов, состоящих на учете в ПДН</p>
+            <p>{{ (currentAcademicYear.id - group.year) * 2 + 1 }} семестр:</p>
+            <p>{{ (currentAcademicYear.id - group.year) * 2 + 2 }} семестр:</p>
+            <p>Год:</p>
+        </div>
+
+        <div class="out-row-block">
+            <p>Показатели: Количество студентов из числа лиц детей сирот и детей ОБПР, из них:</p>
+            <p>{{ (currentAcademicYear.id - group.year) * 2 + 1 }} семестр:</p>
+            <p>{{ (currentAcademicYear.id - group.year) * 2 + 2 }} семестр:</p>
+            <p>Год:</p>
+        </div>
+
+        <div class="out-row-block">
+            <p>Показатели: - ПГО</p>
+            <p>{{ (currentAcademicYear.id - group.year) * 2 + 1 }} семестр:</p>
+            <p>{{ (currentAcademicYear.id - group.year) * 2 + 2 }} семестр:</p>
+            <p>Год:</p>
+        </div>
+
+        <div class="out-row-block">
+            <p>Показатели: - НПГО</p>
+            <p>{{ (currentAcademicYear.id - group.year) * 2 + 1 }} семестр:</p>
+            <p>{{ (currentAcademicYear.id - group.year) * 2 + 2 }} семестр:</p>
+            <p>Год:</p>
+        </div>
+
+        <div class="out-row-block">
+            <p>Показатели: Количество студентов с ОВЗ</p>
+            <p>{{ (currentAcademicYear.id - group.year) * 2 + 1 }} семестр:</p>
+            <p>{{ (currentAcademicYear.id - group.year) * 2 + 2 }} семестр:</p>
+            <p>Год:</p>
+        </div>
+
+        <div class="out-row-block">
+            <p>Показатели: Количество посещений общежития</p>
+            <p>{{ (currentAcademicYear.id - group.year) * 2 + 1 }} семестр:</p>
+            <p>{{ (currentAcademicYear.id - group.year) * 2 + 2 }} семестр:</p>
+            <p>Год:</p>
+        </div>
+
+        <div class="out-row-block">
+            <p>Показатели: Количество проведенных классных часов</p>
+            <p>{{ (currentAcademicYear.id - group.year) * 2 + 1 }} семестр:</p>
+            <p>{{ (currentAcademicYear.id - group.year) * 2 + 2 }} семестр:</p>
+            <p>Год:</p>
+        </div>
+
+        <div class="out-row-block">
+            <p>Показатели: Количество родительских собраний, явка родителей</p>
+            <p>{{ (currentAcademicYear.id - group.year) * 2 + 1 }} семестр:</p>
+            <p>{{ (currentAcademicYear.id - group.year) * 2 + 2 }} семестр:</p>
+            <p>Год:</p>
+        </div>
+
+        <div class="out-row-block">
+            <p>Показатели: Участие студентов группы во внеучебной деятельности (количество мероприятий \ охват)</p>
+            <p>{{ (currentAcademicYear.id - group.year) * 2 + 1 }} семестр:</p>
+            <p>{{ (currentAcademicYear.id - group.year) * 2 + 2 }} семестр:</p>
+            <p>Год:</p>
+        </div>
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+
+    {% if export|default(false) %}
+        <style>
+            tr > :nth-last-child(5) {
+                width: 8%;
+            }
+
+            tr > :nth-last-child(4) {
+                width: 52%;
+            }
+
+            tr > :nth-last-child(3) {
+                width: 15%;
+            }
+
+            tr > :nth-last-child(2) {
+                width: 15%;
+            }
+
+            tr > :nth-last-child(1) {
+                width: 10%;
+            }
+        </style>
+    {% endif %}
+{% endblock %}

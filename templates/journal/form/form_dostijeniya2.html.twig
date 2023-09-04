@@ -1,0 +1,78 @@
+{% extends export|default(false) ? 'journal/form/export.html.twig' : 'journal/form/layout.html.twig' %}
+
+{% block form %}
+    <p>
+        Сведения об участии студентов в университетских, городских, областных и общероссийских мероприятиях
+        {{ currentAcademicYear.id - group.year + 1 }} курс
+        {{ currentAcademicYear.id }} учебный год
+    </p>
+{% endblock %}
+
+{% block table %}
+
+    <form id="filter_form" style="flex-basis: 100%">
+        <div class="form-group">
+            <label for="surname">Фамилия</label>
+            <input type="text" name="surname" id="surname">
+        </div>
+
+        <div class="form-group">
+            <label for="name">Имя</label>
+            <input type="text" name="name" id="name">
+        </div>
+
+        <div class="form-group">
+            <label for="patronymic">Отчество</label>
+            <input name="patronymic" id="patronymic" type="text">
+        </div>
+
+        <div class="form-group">
+            <input type="submit" class="btn_auth" name="btn" value="Обновить">
+        </div>
+    </form>
+
+    <div class="out-block">
+        {% for participation in participations %}
+            <div class="out-row-block">
+                <p class="col_date">Дата, время проведения: {{ participation.event.date|date('d.m.Y') }}</p>
+                <p>Мероприятие: {{ participation.event.name }}</p>
+                <p>Результат: {{ participation.result }}</p>
+                <p>ФИО участника: {{ participation.student.fio }}</p>
+            </div>
+        {% endfor %}
+    </div>
+
+    <script>
+        $(function () {
+            $('#filter_form').submit(function (e) {
+                e.preventDefault();
+                console.warn("submit")
+            });
+        });
+    </script>
+
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+
+    {% if export|default(false) %}
+        <style>
+            tr > :nth-child(1) {
+                width: 20%;
+            }
+
+            tr > :nth-child(2) {
+                width: 30%;
+            }
+
+            tr > :nth-child(3) {
+                width: 20%;
+            }
+
+            tr > :nth-child(4) {
+                width: 30%;
+            }
+        </style>
+    {% endif %}
+{% endblock %}
