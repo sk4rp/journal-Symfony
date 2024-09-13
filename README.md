@@ -2,11 +2,18 @@
 
 Проект на Symfony 5.4.
 
-<hr>
+---
 
-<h2>Данные для авторизации: </h2>
-1) zorina_i - zorina_i123 <br>
-2) zakirova_r - zakirova_r123 <br>
-3) balashova_a - balashova_a123 <br>
-4) admin - admin
+## Данные для авторизации
 
+1. **zorina_i**
+   - **Пароль:** `zorina_i123`
+
+2. **zakirova_r**
+   - **Пароль:** `zakirova_r123`
+
+3. **balashova_a**
+   - **Пароль:** `balashova_a123`
+
+4. **admin**
+   - **Пароль:** `admin`
